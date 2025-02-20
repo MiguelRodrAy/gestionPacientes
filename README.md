@@ -1,50 +1,11 @@
-# React + TypeScript + Vite
+# Proyecto 5 - Gestión de pacientes en una clínica veterinaria
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este es el quinto proyecto del curso **React y TypeScript - La Guía Completa** de Udemy, impartido por **Juan Pablo De la Torre Valdez**.
 
-Currently, two official plugins are available:
+Este proyecto consiste en la creación de una aplicación de gestión de pacientes animales en una clínica veterinaria. La aplicación permite realizar las operaciones básicas CRUD pudiendo rellenar los datos de la mascota en un formulario, guardarlos, editarlos y eliminarlos. 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Para gestionar el estado de los pacientes se utiliza **Zustand**, una biblioteca que incluye una serie de funciones que facilitan la implementación de un sistema de gesti´on del estado más limpio y simple. A diferencia de los anteriores proyectos en los que se hacia uso de otras alternativas como useReducer o ContextAPI para gestionar el estado de forma nativa en React, en este proyecto se utiliza un store de Zustand. Un store es un objeto o estructura que contiene el estado global de la aplicación. Su principal función es centralizar el estado y permitir que diferentes componentes de la aplicación puedan acceder y modificar ese estado de manera predecible.
 
-## Expanding the ESLint configuration
+Gracias a este proyecto he podido aprender los fundamentos de uso de Zustand para la gestión del estado global y he comprendido mejor la importancia de gestionar el estado de una aplicación de una forma segura y consistente.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+Se puede acceder al proyecto desplegado en GitHub Pages a través del siguiente enlace: https://miguelrodray.github.io/gestionPacientes/
